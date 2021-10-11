@@ -1,0 +1,47 @@
+/*!
+
+ =========================================================
+ * Now UI Dashboard - v1.0.1
+ =========================================================
+
+ * Product Page: http://www.creative-tim.com/product/getfreeapi
+ * Copyright 2017 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/getfreeapi/blob/master/LICENSE.md)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import "getfreeapi/variables";
+@import "getfreeapi/mixins";
+
+// Plugins CSS
+@import "getfreeapi/plugins/plugin-animate-bootstrap-notify";
+@import "getfreeapi/plugins/plugin-perfect-scrollbar";
+
+// Core CSS
+@import "getfreeapi/buttons";
+@import "getfreeapi/inputs";
+@import "getfreeapi/typography";
+@import "getfreeapi/misc";
+@import "getfreeapi/checkboxes-radio";
+
+// components
+@import "getfreeapi/navbar";
+@import "getfreeapi/page-header";
+@import "getfreeapi/dropdown";
+@import "getfreeapi/alerts";
+@import "getfreeapi/images";
+@import "getfreeapi/nucleo-outline";
+@import "getfreeapi/tables";
+@import "getfreeapi/sidebar-and-main-panel";
+@import "getfreeapi/cards";
+@import "getfreeapi/footers";
+@import "getfreeapi/fixed-plugin";
+
+@import "getfreeapi/responsive";
+@import "getfreeapi/dash";
