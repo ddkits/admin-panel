@@ -1,4 +1,4 @@
-@extends('adminpanel::layouts.dash')
+@extends('layouts.app')
 @inject('getInfo', 'Ddkits\Adminpanel\Controller\AdminPanelController')
 @inject('msgsBar', 'Ddkits\Adminpanel\Controller\MsgsController')
 @inject('getProfile', 'Ddkits\Adminpanel\Controller\ProfilesController')
