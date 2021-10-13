@@ -13,6 +13,23 @@
             "email": "melayyoub@outlook.com"
         }
     ],
+    "extra":
+    {
+        "laravel":
+        {
+            "providers":
+            [
+                "Collective\\Html\\HtmlServiceProvider"
+            ],
+            "aliases":
+            {
+                "Form": "Collective\\Html\\FormFacde",
+                "Html": "Collective\\Html\\HtmlFacde"
+            }
+        }
+    },
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "laravelcollective/html": "6.x-dev"
+    }
 }
