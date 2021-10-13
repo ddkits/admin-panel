@@ -3,7 +3,7 @@
 
 Route::group(['middleware' => ['web', 'auth']], function () {
     // admins
-    Route::resource('/admin/menus', 'Ddkits\Adminpanel\Controller\MenusController');
+    Route::resource('/admin/menu', 'Ddkits\Adminpanel\Controller\MenusController');
     Route::resource('/admin', 'Ddkits\Adminpanel\Controller\AdminPanelController');
     Route::resource('/admin/profile', 'Ddkits\Adminpanel\Controller\ProfilesController');
     // Route::resource('/admin-refreshapps', 'RefreshAppsCont');
