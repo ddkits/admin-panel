@@ -5,7 +5,7 @@ namespace Ddkits\Adminpanel\Controller;
 
 use Ddkits\Adminpanel\Models\Profiles;
 use Illuminate\Http\Request;
-use App\User;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\AdminsCont;
 use Illuminate\Support\Facades\DB;

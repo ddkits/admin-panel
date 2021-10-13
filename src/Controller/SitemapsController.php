@@ -5,7 +5,7 @@ namespace Ddkits\Adminpanel\Controller;
 
 use Ddkits\Adminpanel\Models\Sitemaps;
 use Illuminate\Http\Request;
-use App\User;
+use App\Models\User;
 use Ddkits\Adminpanel\Models\Post;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\AdminsCont;
