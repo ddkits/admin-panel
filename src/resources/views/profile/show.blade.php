@@ -85,7 +85,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                {{ Form::label('body', 'About Me:', ["class" => 'col-md-12 ']) }}{{ Form::textarea('description', $profile->description, ["class" => 'form-control', 'required' => 'true']) }}
+                                                {{ Form::label('body', 'About Me:', ["class" => 'col-md-12 ']) }}{{ Form::textarea('description', $profile->description, ["class" => 'form-control']) }}
                                             </div>
                                         </div>
                                     </div>
@@ -102,8 +102,7 @@
                         <div class="card card-user">
                             <div class="image">
 
-
-
+                                {{ Form::label('image', 'Picture', ["class" => 'col-md-12 ']) }}{{ Form::file('image', ["class" => 'col-md-12 ', "onchange" => 'readURL(this);']) }}
                             </div>
                             <div class="card-body">
                             	<script type="text/javascript">
