@@ -106,6 +106,7 @@ class ProfilesController extends Controller
         $this->validate($request, array(
             'firstname' => 'string|max:255',
             'lastname' => 'string|max:255',
+            'phone' => 'string|max:255',
             'job_title' => 'required|string|max:255',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ));

@@ -70,7 +70,7 @@
                                 <div class="row">
                                     <div class="col-md-6 pr-1">
                                         <div class="form-group">
-                                            {{ Form::label('Address', 'Address:', ["class" => 'col-md-12 ']) }}{{ Form::text('industry', $getProfile->getUserInfo($profile->uid)->address, ["class" => 'form-control']) }}
+                                            {{ Form::label('address', 'Address:', ["class" => 'col-md-12 ']) }}{{ Form::text('address', $getProfile->getUserInfo($profile->uid)->address, ["class" => 'form-control']) }}
                                         </div>
                                     </div>
                                 </div>
