@@ -54,26 +54,8 @@ class MenusController extends Controller
      */
     public function mainMenus()
     {
-         $menus1 = Menus::where('menu', 'mainmenu')->get();
-        foreach ($menus1 as $key) {
-            if ($key['name']) {
-                $menus[$key->weight] = ['id'=>$key['id'], 'name'=>$key['name']];
-            }
-        }
-        if (!empty($menus)) {
-            krsort($menus);
-            foreach ($menus as $menu) {
-                if ($menu['menu'] == 'mainmenu') {
-                    if ($menu['name']) {
-                        $mainMenus[$menu['id']] = $menu['name'];
-                    }
-                }
-            }
-        }else{
-            $mainMenus = [];
-        }
-
-            return Menus::where('menu', 'mainmenu');
+       $menus1 = Menus::where('menu', 'mainmenu');
+       return $menus1;
     }
 
     /**
