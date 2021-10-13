@@ -36,7 +36,7 @@
            @if ($menu->menu == 'adminmenu')
                        <div class="col-md-12">
                           <div class="p-1 m-1 edit">
-                          {!! Form::open(['route' => ['menus.update', $menu->id], 'method' => 'put', 'class'=> 'form-group col-md-12']) !!}
+                          {!! Form::open(['route' => ['menu.update', $menu->id], 'method' => 'put', 'class'=> 'form-group col-md-12']) !!}
                             <div class="col-md-12">
                               <a href="#index-{{$menu->id}}" aria-expanded="false" data-toggle="collapse"><i class="{{$menu->iconclass}}"></i>#{{$menu->id}}: {{$menu->name}}</a>
                           <div id="index-{{$menu->id}}" class="collapse p-1 col-md-12 row">
@@ -64,7 +64,7 @@
                             {!! Form::close() !!}
                         </div>
                             <div class="pull-right col-md-6">
-                            {!! Form::open(['route'=>['menus.destroy', $menu->id], 'method'=> 'DELETE'])!!}
+                            {!! Form::open(['route'=>['menu.destroy', $menu->id], 'method'=> 'DELETE'])!!}
                               {!! Form::submit('Delete', ["class"=> 'btn-danger btn']) !!}
                             {!! Form::close() !!}</div>
                         </div></div>
@@ -83,7 +83,7 @@
            @if ($menu->menu == 'mainmenu')
                     <div class="col-md-12">
                         <div class="p-1 m-1 edit">
-                          {!! Form::open(['route' => ['menus.update', $menu->id], 'method' => 'put', 'class'=> 'form-group col-md-12']) !!}
+                          {!! Form::open(['route' => ['menu.update', $menu->id], 'method' => 'put', 'class'=> 'form-group col-md-12']) !!}
                           <div class="col-md-12">
                             <a href="#index-{{$menu->id}}" aria-expanded="false" data-toggle="collapse"><i class="{{$menu->iconclass}}"></i>#{{$menu->id}}: {{$menu->name}}</a>
                         <div id="index-{{$menu->id}}" class="collapse p-1 col-md-12 row">
@@ -109,7 +109,7 @@
                                 {!! Form::close() !!}
                             </div>
                                 <div class="pull-right col-md-6">
-                                {!! Form::open(['route'=>['menus.destroy', $menu->id], 'method'=> 'DELETE'])!!}
+                                {!! Form::open(['route'=>['menu.destroy', $menu->id], 'method'=> 'DELETE'])!!}
                                   {!! Form::submit('Delete', ["class"=> 'btn-danger btn']) !!}
                                 {!! Form::close() !!}</div>
                             </div></div>

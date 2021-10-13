@@ -25,7 +25,7 @@
       <div class="well bg-white col-lg-12 has-shadow align-items-center text-center">
         <h1>Site Configurations</h1>
 	<div class="container-fluid col-lg-12 ">
-		{!! Form::open(array('route' => 'menus.store')) !!}
+		{!! Form::open(array('route' => 'menu.store')) !!}
 		    {{ Form::number('uid', Auth::user()->id, ['hidden'=>'']) }}
 			<div class="project">
     <div class="row bg-white has-shadow">
@@ -53,7 +53,7 @@
       </div>
       <div class="right-col col-lg-8 col-suffix-4 d-flex align-items-center">
         <div > {{ Form::submit('Create Menu', array('class' => 'btn btn-success')) }}</div>
-        <div ><a href="{{ route('menus.index') }}" class="edit btn btn-danger">Cancel</a></div>
+        <div ><a href="{{ route('menu.index') }}" class="edit btn btn-danger">Cancel</a></div>
     </div>
   </div>
 		{!! Form::close() !!}

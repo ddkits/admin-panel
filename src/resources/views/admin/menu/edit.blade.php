@@ -29,7 +29,7 @@
                         <div class="row col-lg-12 d-flex align-items-center justify-content-between">
                         <div class="left-col col-lg-8 d-flex align-items-center justify-content-between">
                           <div class="project-title d-flex align-items-center edit">
-                          {!! Form::open(['route' => ['menus.update', $menu->id], 'method' => 'put']) !!}
+                          {!! Form::open(['route' => ['menu.update', $menu->id], 'method' => 'put']) !!}
                             <div class="row text col-lg-12">
                               {{ Form::label('name', 'Name:') }}{{ Form::text('name', $menu->name, array('class' => 'Form-control col-md-12')) }}
                               {{ Form::label('menu', 'Menu Type:') }}{{ Form::select('menu', array('mainmenu' => 'Main Menu', 'adminmenu' => 'Admin Menu'), array('class' => 'Form-control')) }}
@@ -42,7 +42,7 @@
                               {{ Form::label('description', 'Menu Description:') }} {{ Form::textarea('description', $menu->description, array('class' => 'Form-control')) }}
                               {{ Form::submit('Save', ["class"=>"btn btn-success btn-block"]) }}
                             {!! Form::close() !!}
-                             {!! Form::open(['route'=>['menus.destroy', $menu->id], 'method'=> 'DELETE'])!!}
+                             {!! Form::open(['route'=>['menu.destroy', $menu->id], 'method'=> 'DELETE'])!!}
                               {!! Form::submit('Delete', ["class"=> 'btn-danger btn']) !!}
                               {!! Form::close() !!}
                             </div>
