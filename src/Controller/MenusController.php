@@ -60,15 +60,20 @@ class MenusController extends Controller
                 $menus[$key->weight] = ['id'=>$key['id'], 'name'=>$key['name']];
             }
         }
-         krsort($menus);
-        foreach ($menus as $menu) {
-            if ($menu['menu'] == 'mainmenu') {
-                if ($menu['name']) {
-                    $mainMenus[$menu['id']] = $menu['name'];
+        if (!empty($menus)) {
+            krsort($menus);
+            foreach ($menus as $menu) {
+                if ($menu['menu'] == 'mainmenu') {
+                    if ($menu['name']) {
+                        $mainMenus[$menu['id']] = $menu['name'];
+                    }
                 }
             }
+        }else{
+            $mainMenus = [];
         }
-            return $mainMenus;
+
+            return Menus::where('menu', 'mainmenu');
     }
 
     /**

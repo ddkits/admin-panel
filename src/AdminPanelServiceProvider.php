@@ -21,6 +21,8 @@ class AdminPanelServiceProvider extends ServiceProvider
         $this->app->make('Ddkits\Adminpanel\Controller\RolesController');
         $this->app->make('Ddkits\Adminpanel\Controller\ProfilesController');
         $this->app->make('Ddkits\Adminpanel\Controller\SettingsController');
+        $this->app->make('Ddkits\Adminpanel\Controller\SitemapsController');
+        $this->app->make('Ddkits\Adminpanel\Controller\PostController');
         // register our models
         $this->app->make('Ddkits\Adminpanel\Models\AdminPanel');
         $this->app->make('Ddkits\Adminpanel\Models\Settings');
@@ -29,6 +31,8 @@ class AdminPanelServiceProvider extends ServiceProvider
         $this->app->make('Ddkits\Adminpanel\Models\Subs');
         $this->app->make('Ddkits\Adminpanel\Models\Roles');
         $this->app->make('Ddkits\Adminpanel\Models\Profiles');
+        $this->app->make('Ddkits\Adminpanel\Models\Sitemaps');
+        $this->app->make('Ddkits\Adminpanel\Models\Post');
      }
 
     /**

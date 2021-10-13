@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
+use Ddkits\Adminpanel\Models\Post;
 use Ddkits\Adminpanel\Models\Profiles;
 use Ddkits\Adminpanel\Models\Settings;
 
@@ -34,6 +35,8 @@ class DatabaseSeeder extends Seeder
         $this->DDkitsUsers();
         $this->command->info('DDkits Platform Main Admin!');
         $this->DDkitsAdmin();
+        $this->command->info('DDkits PDemo Post and Sitemaps!');
+        $this->DDkitsDemo();
     }
 
     // settings insert
@@ -143,6 +146,24 @@ class DatabaseSeeder extends Seeder
         ];
         foreach ($roles as $role) {
             DB::table('roles')->insert($role);
+        }
+    }
+    public function DDkitsDemo()
+    {
+        Model::unguard();
+        $postIn = new Post;
+        $posts = [
+            [
+                "uid"=>1,
+                "path" => "ddkits",
+                "title" => 'DDkits Welcome Demo Post',
+                'body' => 'DDkits Welcome Demo Post body suppoted and built by Sam ELayyoub melayyoub@outlook.com, powered by DDKits.com .',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]
+        ];
+        foreach ($posts as $post) {
+            $postIn->insert($post);
         }
     }
 

@@ -10,6 +10,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
     Route::get('/admin-test-java', ['as' => 'admin.test.java', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController@testJava']);
     // Route::resource('/admin-shell', 'ShellCont');
     Route::resource('/admin/private/settings', 'Ddkits\Adminpanel\Controller\SettingsController');
+    Route::resource('/admin/posts', 'Ddkits\Adminpanel\Controller\PostController');
     // Route::resource('/admin/sites', 'SitesCont');
     Route::post('/admin-save/settings', ['as' => 'admin.settings.save', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController@storeSettings']);
     Route::post('/admin/create-settings', ['as' => 'admin.settings.store', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController@createSettings']);
@@ -24,4 +25,13 @@ Route::group(['middleware' => ['web', 'auth']], function () {
     // get
 
     Route::get('/admin-users', ['as' => 'admin.users', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController@adminUsers']);
+});
+
+// sitemap links
+Route::get('/sitemap', 'Ddkits\Adminpanel\Controller\SitemapsController@index');
+Route::get('/sitemap/post', 'Ddkits\Adminpanel\Controller\SitemapsController@posts');
+
+// Public Posts
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/article/{path?}', 'Ddkits\Adminpanel\Controller\PostController@showPath')->where('path', '.*');
 });
