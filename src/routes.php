@@ -5,7 +5,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
     // admins
     Route::resource('/admin/menus', 'Ddkits\Adminpanel\Controller\MenusController');
     Route::resource('/admin', 'Ddkits\Adminpanel\Controller\AdminPanelController');
-    Route::resource('/admin/profiles', 'Ddkits\Adminpanel\Controller\ProfilesController');
+    Route::resource('/admin/profile', 'Ddkits\Adminpanel\Controller\ProfilesController');
     // Route::resource('/admin-refreshapps', 'RefreshAppsCont');
     Route::get('/admin-test-java', ['as' => 'admin.test.java', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController@testJava']);
     // Route::resource('/admin-shell', 'ShellCont');
