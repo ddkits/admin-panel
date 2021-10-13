@@ -108,7 +108,7 @@ class ProfilesController extends Controller
             'lastname' => 'string|max:255',
             'job_title' => 'required|string|max:255',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            ))->validate();
+            ));
 
         // save user profile
         ProfilesController::updateUserProfile($request, $id);

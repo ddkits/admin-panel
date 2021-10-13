@@ -35,13 +35,6 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12 px-1">
-                                            <div class="form-group">
-						To access any proxy, you should create an app and assign it to that proxy
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="col-md-6 pr-1">
                                             <div class="form-group">
                                                  {{ Form::label('firstname', 'Firstname:', ["class" => 'col-md-12 ']) }}{{ Form::text('firstname', $getProfile->getUserInfo($profile->uid)->firstname, ["class" => 'form-control', 'required' => 'true']) }}
@@ -54,16 +47,37 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 {{ Form::label('job_title', 'Job Title:', ["class" => 'col-md-12 ']) }}{{ Form::text('job_title', $getProfile->getUserInfo($profile->uid)->job_title, ["class" => 'form-control']) }}
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12 pr-1">
+                                        <div class="col-md-6 pr-1">
                                             <div class="form-group">
                                                 {{ Form::label('industry', 'Industry:', ["class" => 'col-md-12 ']) }}{{ Form::text('industry', $getProfile->getUserInfo($profile->uid)->industry, ["class" => 'form-control']) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 pr-1">
+                                            <div class="form-group">
+                                                {{ Form::label('phone', 'Phone Number:', ["class" => 'col-md-12 ']) }}{{ Form::text('phone', $getProfile->getUserInfo($profile->uid)->phone, ["class" => 'form-control']) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="row">
+                                    <div class="col-md-6 pr-1">
+                                        <div class="form-group">
+                                            {{ Form::label('Address', 'Address:', ["class" => 'col-md-12 ']) }}{{ Form::text('industry', $getProfile->getUserInfo($profile->uid)->address, ["class" => 'form-control']) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="row">
+                                        <div class="col-md-6 pr-1">
+                                            <div class="form-group">
+                                                {{ Form::label('howdidyoufindus', 'How did you find us?', ["class" => 'col-md-12 ']) }}{{ Form::text('howdidyoufindus', $getProfile->getUserInfo($profile->uid)->howdidyoufindus, ["class" => 'form-control']) }}
                                             </div>
                                         </div>
 
