@@ -23,8 +23,18 @@ Route::group(['middleware' => ['web', 'auth']], function () {
     Route::post('/admin-path-update', ['as' => 'admin.updatePath', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController@pathUpdate']);
     // Pages
     // get
-
+    Route::get('dashboard/contacts/{id}/delete',
+    ['as' => 'admin.contacts.delete',
+        'uses' => 'Ddkits\Adminpanel\Controller\ContactController@destroy']
+    );
+    /* contacts */
+    Route::resource('/dashboard/admin/contacts', 'Ddkits\Adminpanel\Controller\ContactController');
+        /* contacts */
     Route::get('/admin-users', ['as' => 'admin.users', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController@adminUsers']);
+     // ipban routes
+     Route::get('/dashboard/admin/block/ip/{ip}', ['as' => 'public.block.ip', 'uses' => 'Ddkits\Adminpanel\Controller\IpbanController@blockIp']);
+     Route::get('/dashboard/admin/unblock/ip/{ip}', ['as' => 'public.unblock.ip', 'uses' => 'Ddkits\Adminpanel\Controller\IpbanController@unBlockIp']);
+
 });
 
 // sitemap links
@@ -33,5 +43,6 @@ Route::get('/sitemap/post', 'Ddkits\Adminpanel\Controller\SitemapsController@pos
 
 // Public Posts
 Route::group(['middleware' => ['web']], function () {
+    Route::post('/contactus/submit', [Ddkits\Adminpanel\Controller\ContactController::class,'submit']);
     Route::get('/article/{path?}', 'Ddkits\Adminpanel\Controller\PostController@showPath')->where('path', '.*');
 });

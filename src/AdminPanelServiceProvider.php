@@ -23,6 +23,8 @@ class AdminPanelServiceProvider extends ServiceProvider
         $this->app->make('Ddkits\Adminpanel\Controller\SettingsController');
         $this->app->make('Ddkits\Adminpanel\Controller\SitemapsController');
         $this->app->make('Ddkits\Adminpanel\Controller\PostController');
+        $this->app->make('Ddkits\Adminpanel\Controller\ContactController');
+        $this->app->make('Ddkits\Adminpanel\Controller\IpbanController');
         // register our models
         $this->app->make('Ddkits\Adminpanel\Models\AdminPanel');
         $this->app->make('Ddkits\Adminpanel\Models\Settings');
@@ -33,6 +35,8 @@ class AdminPanelServiceProvider extends ServiceProvider
         $this->app->make('Ddkits\Adminpanel\Models\Profiles');
         $this->app->make('Ddkits\Adminpanel\Models\Sitemaps');
         $this->app->make('Ddkits\Adminpanel\Models\Post');
+        $this->app->make('Ddkits\Adminpanel\Models\Ipban');
+        $this->app->make('Ddkits\Adminpanel\Models\Contact');
      }
 
     /**
