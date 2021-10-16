@@ -128,7 +128,7 @@ class ProfilesController extends Controller
      */
     public function getProfInfo($id)
     {
-        $profileInfo = Profiles::find($id);
+        $profileInfo = Profiles::where('uid', $id)->first();
         return $profileInfo;
     }
     /**
