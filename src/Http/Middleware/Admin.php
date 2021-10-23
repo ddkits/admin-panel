@@ -4,7 +4,6 @@ namespace Ddkits\Adminpanel\Http\Middleware;
 
 use Closure;
 use Auth;
-use Ddkits\Adminpanel\Models\Ipban;
 
 class Admin
 {
@@ -18,11 +17,10 @@ class Admin
     public function handle($request, Closure $next)
     {
         // check Admin Role in users 0 or 10
-        $checkRoleStatus = Auth::user()->role;
-        if ($checkRoleStatus != 0 or $checkRoleStatus != 10) {
-            return response()->json(['error' => 'Not authorized.'],403);;
+        if (Auth::user()->role == 0 or Auth::user()->role == 10) {
+            return $next($request);
+        }else{
+            return response()->json(['error' => 'Not authorized.' . Auth::user()->role],403);;
         }
-
-        return $next($request);
     }
 }

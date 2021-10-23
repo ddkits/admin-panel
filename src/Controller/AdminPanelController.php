@@ -320,6 +320,7 @@ class AdminPanelController extends Controller
             if ($saveUser) {
                 $saveUser->email = $user['email'];
                 $saveUser->blocked = $user['blocked'];
+                $saveUser->role = $user['role'];
                 $saveUser->save();
 
                 // check admins

@@ -17,9 +17,8 @@
 	    	 <table  class="table table-bordered col-lg-12">
 				 <thead><tr><td class="info">UID</td><td class="info"> Email </td>
 					<td class="info"> Ip </td>
-					<td class="info"> Tables </td>
-					<td class="info"> Requests Count </td>
 					<td class="info">Profile ID</td>
+					<td class="info">Role</td>
 					<td class="info">Admin</td><td class="info">Block</td></tr></thead>
 	    {{ Form::open(['route' => 'admin.users.save', 'method'=>'POST', 'id'=>'newUsersUpdates']) }}
         {{ Form::submit('Save', ['class'=>'btn btn-success pull-right']) }}
@@ -28,14 +27,8 @@
 	     		<td>{{ Form::text('user[' . $users->id . '][id]', $users->id, ['class'=>'form-control', 'size'=>'32', 'hidden'=>1]) }}{{  $users->id }}</td>
 	     		<td>{{ Form::text('user[' . $users->id . '][email]', $users->email, ['class'=>'form-control', 'size'=>'32']) }}</td>
 				 <td>{{ $users->ip }}</td>
-				 {{--  // @TODO uncomment after a while  --}}
-				 <td>
-					 {{ ($usersTables)? $usersTables[$users->id] : 'none' }}
-				 </td>
-				 <td>
-					 {{ ($usersReq)? $usersReq[$users->id] : 'none'}}
-					</td>
 	     		<td>{{ $users->profile }}</td>
+                 <td>{{ Form::number('user[' . $users->id . '][role]', $users->role, ['class'=>'form-control', 'size'=>'32']) }}</td>
 	     		<td>{{ Form::select('user[' . $users->id . '][admin]', ['No', 'Yes'], (($getInfo->getAdmin($users->id) == 1) ? [1] : [0] ), ['class'=>'form-control select2']) }}</td>
 	     		<td>{{ Form::select('user[' . $users->id . '][blocked]', ['No', 'Yes'], (( $users->blocked == 1) ? [1] : [0] ), ['class'=>'form-control select2']) }}</td>
 	     	</tr>
