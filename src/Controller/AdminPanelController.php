@@ -305,6 +305,7 @@ class AdminPanelController extends Controller
         return view('adminpanel::admin.testJava');
     }
 
+    
     /**
      * Display a listing of the resource.
      *
@@ -314,32 +315,32 @@ class AdminPanelController extends Controller
     {
         if ($request) :
             $list = $request->user;
-        foreach ($list as $user) {
-            $saveUser = User::find($user['id']);
+        foreach ($list as $usera) {
+            $saveUser = User::find($usera['id']);
 
             // save users
             if ($saveUser) {
-                $saveUser->email = $user['email'];
-                $saveUser->blocked = $user['blocked'];
-                $saveUser->role = $user['role'];
+                $saveUser->email = $usera['email'];
+                $saveUser->blocked = $usera['blocked'];
+                $saveUser->role = ($usera['admin'] == 1) ? 10 : $usera['role'];
                 $saveUser->save();
 
                 // check admins
-                if ($user['admin'] == 1) {
-                    $admin = DB::table('admins')->where('uid', $user['id'])->first();
+                if ($usera['admin'] == 1) {
+                    $admin = DB::table('admins')->where('uid', $saveUser->id)->first();
                     if (!$admin) {
                         $createAdmin = new Admins();
-                        $createAdmin->uid = $user['id'];
+                        $createAdmin->uid = $saveUser->id;
                         $createAdmin->level = 1;
                         $createAdmin->save();
                         Session::flash('Success', 'New Admin created.');
                     }
                 } else {
-                    $admin = DB::table('admins')->where('uid', $user['id'])->first();
+                    $admin = DB::table('admins')->where('uid', $saveUser->id)->first();
 
                     if ($admin) {
                         $deleteAdmin = DB::table('admins')->where([
-                                'uid' => $user['id'],
+                                'uid' => $saveUser->id,
                             ])->delete();
                     }
                 }
