@@ -3,6 +3,7 @@
 namespace Ddkits\Adminpanel\Controller;
 
 use Ddkits\Adminpanel\Models\AdminPanel;
+use Ddkits\Adminpanel\Models\Admins;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -327,7 +328,7 @@ class AdminPanelController extends Controller
                 if ($user['admin'] == 1) {
                     $admin = DB::table('admins')->where('uid', $user['id'])->first();
                     if (!$admin) {
-                        $createAdmin = new usersAdmin();
+                        $createAdmin = new Admins();
                         $createAdmin->uid = $user['id'];
                         $createAdmin->level = 1;
                         $createAdmin->save();
