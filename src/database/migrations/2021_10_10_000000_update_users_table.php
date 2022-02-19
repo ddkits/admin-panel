@@ -14,7 +14,6 @@ class UpdateUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('name');
             $table->string('api_id', 128)->unique()->nullable();
             $table->integer('blocked')->default(0);
             $table->text('firstname')->nullable();
