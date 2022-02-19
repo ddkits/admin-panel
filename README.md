@@ -29,6 +29,16 @@ php artisan migrate
 ```
  
  
+ Examples of use:
+ ```
+ @inject('menuLinks', 'Ddkits\Adminpanel\Controller\MenusController')
+@inject('isAdmin', 'Ddkits\Adminpanel\Controller\AdminPanelController')
+@inject('getInfo', 'Ddkits\Adminpanel\Controller\AdminPanelController')
+@inject('msgsBar', 'Ddkits\Adminpanel\Controller\MsgsController')
+@inject('profile', 'Ddkits\Adminpanel\Controller\ProfilesController')
+ <!-- {{ $getInfo->getValue('sitename') }} -->
+ ```
+ 
  
  done! 
  
