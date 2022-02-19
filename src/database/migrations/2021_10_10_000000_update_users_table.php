@@ -18,7 +18,7 @@ class UpdateUsersTable extends Migration
             $table->integer('blocked')->default(0);
             $table->text('firstname')->nullable();
             $table->text('lastname')->nullable();
-            $table->string('phone')->nullable();
+            $table->string('phone', 20)->nullable();
             $table->text('address')->nullable();
             $table->text('howdidyoufindus')->nullable();
             $table->string('industry')->nullable();
