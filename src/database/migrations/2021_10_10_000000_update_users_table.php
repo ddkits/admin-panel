@@ -18,7 +18,7 @@ class UpdateUsersTable extends Migration
             $table->integer('blocked')->default(0);
             $table->text('firstname')->nullable();
             $table->text('lastname')->nullable();
-            $table->string('phone', 20)->nullable();
+            $table->string('phone')->nullable();
             $table->text('address')->nullable();
             $table->text('howdidyoufindus')->nullable();
             $table->string('industry')->nullable();
@@ -27,8 +27,8 @@ class UpdateUsersTable extends Migration
             $table->integer('api_only')->default(0);
             $table->integer('role')->default(1);
             $table->integer('level')->default(1);
-            $table->integer('profile')->nullable()->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->integer('profile')->nullable()->unique();
             $table->string('api_token', 128)->unique()->nullable();
         });
     }
