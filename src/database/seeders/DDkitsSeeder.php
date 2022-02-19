@@ -14,7 +14,7 @@ use Ddkits\Adminpanel\Models\Post;
 use Ddkits\Adminpanel\Models\Profiles;
 use Ddkits\Adminpanel\Models\Settings;
 
-class DatabaseSeeder extends Seeder
+class DDkitsSeeder extends Seeder
 {
     /**
      * Seed the application's database.
