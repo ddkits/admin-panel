@@ -19,6 +19,9 @@ Composer require ddkits/admin-panel
 ```
 php artisan vendor:publish
 ```
+```
+php artisan migrate
+```
  
  done! 
  
