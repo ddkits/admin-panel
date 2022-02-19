@@ -15,6 +15,11 @@ Simple
 ```
 Composer require ddkits/admin-panel
 ```
+Add provider to your Config App 
+
+```
+Ddkits\Adminpanel\AdminPanelServiceProvider::class,
+```
 
 ```
 php artisan vendor:publish
@@ -22,6 +27,8 @@ php artisan vendor:publish
 ```
 php artisan migrate
 ```
+ 
+ 
  
  done! 
  
