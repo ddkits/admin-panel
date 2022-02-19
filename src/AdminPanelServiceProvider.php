@@ -52,7 +52,7 @@ class AdminPanelServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/routes.php');
          // register our DB migrations
          $this->loadMigrationsFrom( __DIR__.'/database/migrations');
-         include __DIR__.'/database/seeders/DatabaseSeeder.php';
+         include __DIR__.'/database/seeders/DDkitsSeeder.php';
          $this->publishes([
             __DIR__.'/public' => public_path('ddkits/adminpanel'),
         ], 'public');
