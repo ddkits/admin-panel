@@ -3,9 +3,40 @@
 namespace Ddkits\Adminpanel;
 
 use Illuminate\Support\ServiceProvider;
+use Ddkits\Adminpanel\Database\Seeds\AdminpanelSeeder;
+use Illuminate\Database\Seeder;
+use Illuminate\Console\Events\CommandFinished;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Request;
+use Symfony\Component\Console\Output\ConsoleOutput;
 
 class AdminPanelServiceProvider extends ServiceProvider
 {
+    protected function registerMigrations( )
+                {
+                    $path = __DIR__.'/Database/Seeds';
+                    foreach (glob("$path/*.php") as $filename)
+                    {
+                        include $filename;
+                        $classes = get_declared_classes();
+                        $class = end($classes);
+
+                        $command = Request::server('argv', null);
+                        if (is_array($command)) {
+                            $command = implode(' ', $command);
+                            if ($command == "artisan db:seed") {
+                                Artisan::call('db:seed', ['--class' => $class]);
+                            }
+                        }
+
+                    }
+                }
+    public function run()
+    {
+        $this->call(AdminpanelSeeder::class);
+    }
+
     /**
      * Register services.
      *
@@ -52,11 +83,14 @@ class AdminPanelServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/routes.php');
          // register our DB migrations
          $this->loadMigrationsFrom( __DIR__.'/database/migrations');
-         include_once __DIR__.'/database/seeders/DDkitsSeeder.php';
          $this->publishes([
             __DIR__.'/public' => public_path('ddkits/adminpanel'),
         ], 'public');
         // views
         $this->loadViewsFrom(__DIR__.'/resources/views', 'adminpanel');
+        // Seeds
+        if ($this->app->runningInConsole()) {
+            $this->registerMigrations();
+        }
     }
 }
