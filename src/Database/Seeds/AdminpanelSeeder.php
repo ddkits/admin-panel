@@ -50,7 +50,7 @@ class AdminpanelSeeder extends Seeder
             [
                 'id' => 1,
                 'field_name' => 'sitename',
-                'value' => 'API Documentation Pro',
+                'value' => 'DDKits Admin Panel',
                 'type' => 'settings',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
