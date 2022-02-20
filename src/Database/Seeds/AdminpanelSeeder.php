@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Ddkits\Adminpanel\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
@@ -14,7 +14,7 @@ use Ddkits\Adminpanel\Models\Post;
 use Ddkits\Adminpanel\Models\Profiles;
 use Ddkits\Adminpanel\Models\Settings;
 
-class DDkitsSeeder extends Seeder
+class AdminpanelSeeder extends Seeder
 {
     /**
      * Seed the application's database.
