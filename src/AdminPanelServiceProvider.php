@@ -70,6 +70,9 @@ class AdminPanelServiceProvider extends ServiceProvider
         $this->app->make('Ddkits\Adminpanel\Models\Ipban');
         $this->app->make('Ddkits\Adminpanel\Models\Contact');
         $this->app->make('Ddkits\Adminpanel\Models\MemberType');
+
+        // middle ware
+        $this->app['router']->aliasMiddleware('ipcheck', Ddkits\Adminpanel\Http\Middleware\IpCheck::class);
      }
 
     /**
@@ -79,7 +82,10 @@ class AdminPanelServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Middle ware alive
+        $router = $this->app['router'];
+        $router->pushMiddlewareToGroup('web',  Http\Middleware\IpCheck::class);
+        // Routes
         $this->loadRoutesFrom(__DIR__.'/routes.php');
          // register our DB migrations
          $this->loadMigrationsFrom( __DIR__.'/database/migrations');
