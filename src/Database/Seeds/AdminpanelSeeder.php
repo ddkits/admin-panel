@@ -211,6 +211,7 @@ class AdminpanelSeeder extends Seeder
         $users = [
             [
                 'email' => 'melayyoub@outlook.com',
+                'name' => 'Sam Ayoub',
                 'firstname' => 'Sam',
                 'lastname' => 'Ayoub',
                 'job_title' => 'Admin',
