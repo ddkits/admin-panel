@@ -13,6 +13,9 @@
             "email": "melayyoub@outlook.com"
         }
     ],
+    "require": {
+       "laravelcollective/html": "*"
+    },
     "extra":
     {
         "laravel":
