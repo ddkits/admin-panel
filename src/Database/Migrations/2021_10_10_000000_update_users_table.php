@@ -27,7 +27,6 @@ class UpdateUsersTable extends Migration
             $table->integer('api_only')->default(0);
             $table->integer('role')->default(1);
             $table->integer('level')->default(1);
-            $table->timestamp('email_verified_at')->nullable();
             $table->integer('profile')->nullable()->unique();
             $table->string('api_token', 128)->unique()->nullable();
         });
