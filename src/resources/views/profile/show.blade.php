@@ -132,7 +132,7 @@
                                 </p>
                             </div>
                                  <div class="well message">
-                                    @include('partials._messages')
+                                    @include('adminpanel::partials._messages')
                                 </div>
                             <center>{{ Form::submit('Save', ['class'=>'btn btn-primary btn-block']) }}</center>
                             <hr>

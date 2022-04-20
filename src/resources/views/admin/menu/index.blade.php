@@ -19,7 +19,7 @@
     </div>
     <div class="content">
           <div class="well message">
-              @include('partials._messages')
+              @include('adminpanel::partials._messages')
           </div>
           <!-- edit form column -->
       <div class="well bg-white col-md-12 has-shadow">
