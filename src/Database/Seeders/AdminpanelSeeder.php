@@ -176,10 +176,10 @@ class AdminpanelSeeder extends Seeder
             ['id'=>1, 'weight' => 1, 'description' => 'Admin page', 'menu' => 'adminmenu', 'menuparent' => null, 'name' => 'Admin', 'link' => '/admin', 'iconclass' => 'fa-folder',
             'class' => 'nav-link'],
 
-            ['id'=>2,'weight' => 2, 'description' => 'Menu Admin page', 'menu' => 'adminmenu', 'menuparent' => 1, 'name' => 'Menus', 'link' => '/admin/menus', 'iconclass' => 'fa-wrench',
+            ['id'=>2,'weight' => 2, 'description' => 'Menu Admin page', 'menu' => 'adminmenu', 'menuparent' => 1, 'name' => 'Menus', 'link' => '/ddk/admin/menus', 'iconclass' => 'fa-wrench',
             'class' => 'nav-link'],
 
-            ['id'=>3,'weight' => 3, 'description' => 'Menu create page', 'menu' => 'adminmenu', 'menuparent' => 2, 'name' => 'New menu', 'link' => '/admin/menus/create', 'iconclass' => 'fa-wrench',
+            ['id'=>3,'weight' => 3, 'description' => 'Menu create page', 'menu' => 'adminmenu', 'menuparent' => 2, 'name' => 'New menu', 'link' => '/ddk/admin/menus/create', 'iconclass' => 'fa-wrench',
             'class' => 'nav-link'],
 
             // messages menu

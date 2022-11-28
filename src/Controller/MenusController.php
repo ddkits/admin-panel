@@ -214,7 +214,7 @@ class MenusController extends Controller
     public function destroy($id)
     {
          Menus::destroy($id);
-        return redirect()->route("menu.index");
+        return redirect()->route("ddk.menu.index");
     }
 
 }
