@@ -21,7 +21,7 @@
 	    	<h1>Site Configurations</h1>
 	    	<table class="table table-bordered col-lg-12">
 	    		<tbody>
-	    			{!! Form::open(array('route' => 'admin.settings.store', 'method'=>'POST')) !!}
+	    			{!! Form::open(array('route' => 'ddk.admin.settings.store', 'method'=>'POST')) !!}
 	    			<tr>
 	    				<td>
 	    				{{ Form::text('field_name','', ['class'=>'form-control', 'placeholder'=>'Name']) }}
@@ -47,7 +47,7 @@
 	    	 <hr>
 	    	 <table  class="table table-bordered col-lg-12">
 	    	 	<thead><tr><td class="info"> Name </td><td class="info"> Value </td><td class="info"> Type </td><td class="info">Added by UID</td></tr></thead>
-	    	 	{{ Form::open(['route' => 'admin.settings.save', 'method'=>'POST', 'id'=>'newMsgForm']) }}
+	    	 	{{ Form::open(['route' => 'ddk.admin.settings.save', 'method'=>'POST', 'id'=>'newMsgForm']) }}
 
 	      @foreach($settings as $setting)
 	     	<tr>

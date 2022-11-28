@@ -25,7 +25,7 @@
 			<tbody>
 				<tr>
 					<td>
-						{{ $users }} <a href="{{ route('admin.users')}}">Users</a>
+						{{ $users }} <a href="{{ route('ddk.admin.users')}}">Users</a>
 					</td>
 					<td>
 						{{ $tables }} Tables
@@ -39,7 +39,7 @@
 						Update All Posts Paths (bulk update)
 					</td>
 					<td>
-						{{--  {{ Form::open(array('route' => 'admin.updatePath')) }}
+						{{--  {{ Form::open(array('route' => 'ddk.admin.updatePath')) }}
 						{{ Form::submit('Bulk Update', ['class'=>'form-control btn-success']) }}
 						{{ Form::close() }}  --}}
 					</td>

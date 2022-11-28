@@ -58,7 +58,7 @@
                                    title=""
                                    class="btn btn-default p-2"
                                    data-original-title="View"><i class="fa fa-eye"></i></a>
-                                   <a href="{{ route('admin.contacts.delete', $contact->id) }}"
+                                   <a href="{{ route('ddk.admin.contacts.delete', $contact->id) }}"
                                     data-toggle="tooltip"
                                     title=""
                                     class="btn btn-default p-2"

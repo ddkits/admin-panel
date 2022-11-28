@@ -142,7 +142,7 @@ class MenusController extends Controller
         Session::flash('Success', 'Menu created successfully!');
         // redirect
 
-        return redirect()->route('menu.index');
+        return redirect()->route('ddk.menu.index');
     }
 
     /**
@@ -153,7 +153,7 @@ class MenusController extends Controller
      */
     public function show($id)
     {
-        return view('menu.index');
+        return view('ddk.menu.index');
     }
 
     /**
@@ -202,7 +202,7 @@ class MenusController extends Controller
         Session::flash('Success', 'Menu created successfully!');
         // redirect
 
-        return redirect()->route('menu.index');
+        return redirect()->route('ddk.menu.index');
     }
 
     /**

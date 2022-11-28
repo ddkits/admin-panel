@@ -20,7 +20,7 @@
 					<td class="info">Profile ID</td>
 					<td class="info">Role</td>
 					<td class="info">Admin</td><td class="info">Block</td></tr></thead>
-	    {{ Form::open(['route' => 'admin.users.save', 'method'=>'POST', 'id'=>'newUsersUpdates']) }}
+	    {{ Form::open(['route' => 'ddk.admin.users.save', 'method'=>'POST', 'id'=>'newUsersUpdates']) }}
         {{ Form::submit('Save', ['class'=>'btn btn-success pull-right']) }}
 	      @foreach($adminUsers->paginate(20) as $users)
 	     	<tr>

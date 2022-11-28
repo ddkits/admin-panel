@@ -15,7 +15,7 @@
 	    	 <hr>
 	    	 <table  class="table table-bordered col-lg-12">
 	    	 	<thead><tr><td class="info"> Name </td><td class="info"> Value </td><td class="info"> Type </td><td class="info">Added by UID</td></tr></thead>
-	    	 	{{ Form::open(['route' => 'admin.settings.save', 'method'=>'POST', 'id'=>'newMsgForm']) }}
+	    	 	{{ Form::open(['route' => 'ddk.admin.settings.save', 'method'=>'POST', 'id'=>'newMsgForm']) }}
 
 	      @foreach($settings as $settings)
 	     	<tr><td>{{ str_replace('_', ' ', ucfirst($settings->field_name)) }} </td><td> {{ (($settings->field_name != 'powered_by') ? Form::text($settings->field_name, $settings->value, ['class'=>'form-control']) : $settings->value ) }} </td><td> {{ $settings->type }}</td><td>{{ ($user->find($settings->uid)) ? $user->find($settings->uid)->firstname : '' }}</td></tr>

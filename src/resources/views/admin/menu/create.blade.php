@@ -53,7 +53,7 @@
       </div>
       <div class="right-col col-lg-8 col-suffix-4 d-flex align-items-center">
         <div > {{ Form::submit('Create Menu', array('class' => 'btn btn-success')) }}</div>
-        <div ><a href="{{ route('menu.index') }}" class="edit btn btn-danger">Cancel</a></div>
+        <div ><a href="{{ route('ddk.menu.index') }}" class="edit btn btn-danger">Cancel</a></div>
     </div>
   </div>
 		{!! Form::close() !!}

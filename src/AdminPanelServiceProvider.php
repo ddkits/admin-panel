@@ -18,7 +18,7 @@ class AdminPanelServiceProvider extends ServiceProvider
                     $path = __DIR__.'/Database/Seeders';
                     foreach (glob("$path/*.php") as $filename)
                     {
-                        include $filename;
+                        // include $filename;
                         $classes = get_declared_classes();
                         $class = end($classes);
 

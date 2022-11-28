@@ -15,7 +15,7 @@
 	    	 <hr>
 	    	 <table  class="table table-bordered col-lg-12">
 	    	 	<thead><tr><td class="info"> Title </td><td class="info"> Author </td><td class="info"> Homepage </td><td class="info">Added by UID</td></tr></thead>
-	    	 	{{ Form::open(['route' => 'admin.posts.save', 'method'=>'POST', 'id'=>'savePosts']) }}
+	    	 	{{ Form::open(['route' => 'ddk.admin.posts.save', 'method'=>'POST', 'id'=>'savePosts']) }}
 
 	      @foreach($adminPosts->paginate(10) as $posts)
 	     		<tr>
