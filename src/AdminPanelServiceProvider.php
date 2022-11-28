@@ -3,7 +3,7 @@
 namespace Ddkits\Adminpanel;
 
 use Illuminate\Support\ServiceProvider;
-use Ddkits\Adminpanel\Database\Seeds\AdminpanelSeeder;
+use Ddkits\Adminpanel\Database\Seeders\AdminpanelSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Console\Events\CommandFinished;
 use Illuminate\Support\Facades\Artisan;
@@ -15,7 +15,7 @@ class AdminPanelServiceProvider extends ServiceProvider
 {
     protected function registerMigrations( )
                 {
-                    $path = __DIR__.'/Database/Seeds';
+                    $path = __DIR__.'/Database/Seeders';
                     foreach (glob("$path/*.php") as $filename)
                     {
                         include $filename;
