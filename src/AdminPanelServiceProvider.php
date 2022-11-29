@@ -3,7 +3,6 @@
 namespace Ddkits\Adminpanel;
 
 use Illuminate\Support\ServiceProvider;
-use Ddkits\Adminpanel\Database\Seeders\AdminpanelSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Console\Events\CommandFinished;
 use Illuminate\Support\Facades\Artisan;
@@ -13,25 +12,6 @@ use Symfony\Component\Console\Output\ConsoleOutput;
 
 class AdminPanelServiceProvider extends ServiceProvider
 {
-    protected function registerMigrations( )
-                {
-                    $path = __DIR__.'/Database/Seeders';
-                    foreach (glob("$path/*.php") as $filename)
-                    {
-                        // include $filename;
-                        $classes = get_declared_classes();
-                        $class = end($classes);
-
-                        $command = Request::server('argv', null);
-                        if (is_array($command)) {
-                            $command = implode(' ', $command);
-                            if ($command == "artisan db:seed") {
-                                Artisan::call('db:seed', ['--class' => $class]);
-                            }
-                        }
-
-                    }
-                }
     public function run()
     {
         $this->call(AdminpanelSeeder::class);
@@ -79,18 +59,28 @@ class AdminPanelServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if ($this->app->runningInConsole()) {
+            $this->publishResources();
+
+        }
         $this->loadRoutesFrom(__DIR__.'/routes.php');
-         // register our DB migrations
-         $this->loadMigrationsFrom( __DIR__.'/database/migrations');
-         $this->publishes([
-            __DIR__.'/public' => public_path('ddkits/adminpanel'),
-        ], 'public');
+        // register our DB migrations
+        $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
+        $this->loadMigrationsFrom(__DIR__.'/Database/Seeders');
         // views
         $this->loadViewsFrom(__DIR__.'/resources/views', 'adminpanel');
-        // Seeds
-        if ($this->app->runningInConsole()) {
-            $this->registerMigrations();
-        }
+         // register our DB migrations
+         $this->loadMigrationsFrom( __DIR__.'/database/migrations');
+    }
+
+    protected function publishResources()
+    {
+        $this->publishes([
+            __DIR__.'/Database/Seeders/AdminpanelSeeder.php' => database_path('Seeders/AdminpanelSeeder.php'),
+        ], 'AdminpanelSeeder');
+        $this->publishes([
+            __DIR__.'/public' => public_path('ddkits/adminpanel'),
+        ], 'public');
+
     }
 }
