@@ -21,9 +21,14 @@ Add provider to your Config App
 Ddkits\Adminpanel\AdminPanelServiceProvider::class,
 ```
 
+In Database/Seeders after the step publish will have new seeder for roles and menus basic links, can be modified as needed.
+
 ```
 php artisan vendor:publish
+php artisan migrate
+php artisan db:seed --class=AdminpanelSeeder // for basic roles and login
 ```
+
 ```
 php artisan migrate
 ```
@@ -45,15 +50,5 @@ php artisan migrate
  No need to worry about the DB structure of admins, will Be simple roles system to start from 
  
  Regards
- Sam Elayyoub
+ Sam Ayoub
  DDKits.com
- 
- 
- ```
- "repositories": [
-        {
-            "type": "path",
-            "url": "https://github.com/ddkits/admin-panel.git"
-        }
-    ],
-```
