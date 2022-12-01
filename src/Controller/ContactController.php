@@ -70,7 +70,7 @@ class ContactController extends Controller
             'phone' => 'required|not_regex:[<\s*a[^>]*>(.*?)<\s*/\s*a>]',
             'message' => 'required|not_regex:[<\s*a[^>]*>(.*?)<\s*/\s*a>]',
             // 'subject' => 'required',
-            'captchacode' => 'required|confirmed'
+            // 'captchacode' => 'required|confirmed'
         ])->validate();
 
         $input = $request->all();
