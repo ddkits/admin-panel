@@ -64,10 +64,9 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+
         Validator::make($request->all(), [
-            'name' => 'required|not_regex:[<\s*a[^>]*>(.*?)<\s*/\s*a>]',
             'email' => 'required|email',
-            'phone' => 'required|not_regex:[<\s*a[^>]*>(.*?)<\s*/\s*a>]',
             'message' => 'required|not_regex:[<\s*a[^>]*>(.*?)<\s*/\s*a>]',
             // 'subject' => 'required',
             // 'captchacode' => 'required|confirmed'
@@ -148,29 +147,17 @@ class ContactController extends Controller
         return back();
     }
     public function submit(Request $request) {
-        $this->validate($request, [
-            'name' => 'required|not_regex:[<\s*a[^>]*>(.*?)<\s*/\s*a>]',
+        Validator::make($request->all(), [
             'email' => 'required|email',
-            'phone' => 'required|not_regex:[<\s*a[^>]*>(.*?)<\s*/\s*a>]',
-            'address' => 'required|not_regex:[<\s*a[^>]*>(.*?)<\s*/\s*a>]',
             'message' => 'required|not_regex:[<\s*a[^>]*>(.*?)<\s*/\s*a>]',
-            'howdidyou' => 'not_regex:[<\s*a[^>]*>(.*?)<\s*/\s*a>]',
             // 'subject' => 'required',
             // 'captchacode' => 'required|confirmed'
-        ]);
-
+        ])->validate();
+        $input = $request->all();
         /*
           Add mail functionality here.
         */
-        $new = new Contact;
-        $new->name = $request->name;
-        $new->address = $request->address;
-        $new->phone = $request->phone;
-        $new->howdidyoufindus = $request->howdidyou;
-        $new->message = $request->message;
-        $new->email = $request->email;
-        $new->save();
-
+        Contact::insert($input);
         return response()->json(null, 200);
     }
 }
