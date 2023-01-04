@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'ddkits/admin-panel',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '15d59efaa4aa0722ddfc9d0b89201e1fbc774a63',
+        'pretty_version' => '1.0.45',
+        'version' => '1.0.45.0',
+        'reference' => NULL,
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'ddkits/admin-panel' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '15d59efaa4aa0722ddfc9d0b89201e1fbc774a63',
+            'pretty_version' => '1.0.45',
+            'version' => '1.0.45.0',
+            'reference' => NULL,
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -51,7 +51,7 @@
         'illuminate/collections' => array(
             'pretty_version' => '9.x-dev',
             'version' => '9.9999999.9999999.9999999-dev',
-            'reference' => 'dd78f942e2052743e8f290292e4f7a40ec96ca12',
+            'reference' => '03777893d04776c2491c7b85fff3e4dd6723d928',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/collections',
             'aliases' => array(),
@@ -78,7 +78,7 @@
         'illuminate/contracts' => array(
             'pretty_version' => '9.x-dev',
             'version' => '9.9999999.9999999.9999999-dev',
-            'reference' => 'c7cc6e6198cac6dfdead111f9758de25413188b7',
+            'reference' => '856ad15be8d80a2f217d30cfe2df3fc3a5c886fd',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/contracts',
             'aliases' => array(),
@@ -96,7 +96,7 @@
         'illuminate/filesystem' => array(
             'pretty_version' => '9.x-dev',
             'version' => '9.9999999.9999999.9999999-dev',
-            'reference' => '3e29c07c25e759a99ec09377838e3926e33d9f5f',
+            'reference' => '9923cb717f5505b84200fb78feba1c2f2fe9fe83',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/filesystem',
             'aliases' => array(),
@@ -105,7 +105,7 @@
         'illuminate/http' => array(
             'pretty_version' => '9.x-dev',
             'version' => '9.9999999.9999999.9999999-dev',
-            'reference' => '8b50b823dbd927ab05f0b39004911e7f4f7263df',
+            'reference' => '2b5718dd35b5202cc6b934f7335d507957995c97',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/http',
             'aliases' => array(),
@@ -114,7 +114,7 @@
         'illuminate/macroable' => array(
             'pretty_version' => '9.x-dev',
             'version' => '9.9999999.9999999.9999999-dev',
-            'reference' => '25a2c6dac2b7541ecbadef952702e84ae15f5354',
+            'reference' => 'e3bfaf6401742a9c6abca61b9b10e998e5b6449a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/macroable',
             'aliases' => array(),
@@ -132,7 +132,7 @@
         'illuminate/routing' => array(
             'pretty_version' => '9.x-dev',
             'version' => '9.9999999.9999999.9999999-dev',
-            'reference' => '5999437d38d3d9de7044352401ff1ecfa3c04b36',
+            'reference' => '6856023e1a5bfdaa5c14a1fd6e72f94c818bf3fa',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/routing',
             'aliases' => array(),
@@ -141,7 +141,7 @@
         'illuminate/session' => array(
             'pretty_version' => '9.x-dev',
             'version' => '9.9999999.9999999.9999999-dev',
-            'reference' => '97d27f60c0860e2850b86b57a5cd14b31c8b7833',
+            'reference' => '1e5d31bf7c6ed5844cedd4c36cf8251ec677309e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/session',
             'aliases' => array(),
@@ -150,7 +150,7 @@
         'illuminate/support' => array(
             'pretty_version' => '9.x-dev',
             'version' => '9.9999999.9999999.9999999-dev',
-            'reference' => '4062a19b71b68fac9248d4cf5948130a5e7e25b1',
+            'reference' => 'ffe4f67ae979a88c0d4ed4abf8bd9714c22ecfac',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/support',
             'aliases' => array(),
@@ -159,7 +159,7 @@
         'illuminate/view' => array(
             'pretty_version' => '9.x-dev',
             'version' => '9.9999999.9999999.9999999-dev',
-            'reference' => '951a68bbbecaa5f744bfd01e8dcdd482d0604348',
+            'reference' => 'f99b45451a078c49c2930e0c8b409c34b742d573',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/view',
             'aliases' => array(),
@@ -177,7 +177,7 @@
         'nesbot/carbon' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '6244541cdd0b323af59bbccfee857c6bd1cde88c',
+            'reference' => '1e60d1b9b3a445a6d450d960019a0a0c2f2a59d3',
             'type' => 'library',
             'install_path' => __DIR__ . '/../nesbot/carbon',
             'aliases' => array(
@@ -250,18 +250,18 @@
         'symfony/deprecation-contracts' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'dc6c2f7633f6ed7d518c285f5772fff7fdf815e7',
+            'reference' => '1ee04c65529dea5d8744774d474e7cbd2f1206d3',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/deprecation-contracts',
             'aliases' => array(
-                0 => '3.2.x-dev',
+                0 => '3.3.x-dev',
             ),
             'dev_requirement' => false,
         ),
         'symfony/error-handler' => array(
             'pretty_version' => '6.3.x-dev',
             'version' => '6.3.9999999.9999999-dev',
-            'reference' => 'd9894724a9d20afd3329e36b36e45835b5c2ab3e',
+            'reference' => 'fb6a7ed7098e011379b89b2bd8cf89bb09445390',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/error-handler',
             'aliases' => array(),
@@ -270,7 +270,7 @@
         'symfony/event-dispatcher' => array(
             'pretty_version' => '6.3.x-dev',
             'version' => '6.3.9999999.9999999-dev',
-            'reference' => '9efb1618fabee89515fe031314e8ed5625f85a53',
+            'reference' => '7ecc52e03b4b7c69d4ff900a2ecbaf1f5c3ab4ef',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/event-dispatcher',
             'aliases' => array(),
@@ -279,11 +279,11 @@
         'symfony/event-dispatcher-contracts' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'aed7f3a79a01a8c1f1d8b2b5d0446c99e73d1a3a',
+            'reference' => '0782b0b52a737a05b4383d0df35a474303cabdae',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/event-dispatcher-contracts',
             'aliases' => array(
-                0 => '3.2.x-dev',
+                0 => '3.3.x-dev',
             ),
             'dev_requirement' => false,
         ),
@@ -296,7 +296,7 @@
         'symfony/finder' => array(
             'pretty_version' => '6.3.x-dev',
             'version' => '6.3.9999999.9999999-dev',
-            'reference' => 'eb2355f69519e4ef33f1835bca4c935f5d42e570',
+            'reference' => 'eba9fbf9bea869b30c5adf3b36fefa0f53ed2a4f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/finder',
             'aliases' => array(),
@@ -305,7 +305,7 @@
         'symfony/http-foundation' => array(
             'pretty_version' => '6.3.x-dev',
             'version' => '6.3.9999999.9999999-dev',
-            'reference' => 'edc56ed49a2955383d59e9b7043fd3bbc26f1854',
+            'reference' => '5018a632c53587f68a2071bf53219b28532595ca',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/http-foundation',
             'aliases' => array(),
@@ -314,7 +314,7 @@
         'symfony/http-kernel' => array(
             'pretty_version' => '6.3.x-dev',
             'version' => '6.3.9999999.9999999-dev',
-            'reference' => 'b0b729fba73ec3bb1a43aa46957b817d4c626af4',
+            'reference' => '72121a3fb3b61b70ef652f09c03edeffd3aff9c1',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/http-kernel',
             'aliases' => array(),
@@ -323,7 +323,7 @@
         'symfony/mime' => array(
             'pretty_version' => '6.3.x-dev',
             'version' => '6.3.9999999.9999999-dev',
-            'reference' => '1e8005a7cbd79fb824ad81308ef2a76592a08bc0',
+            'reference' => '104d724706b9600cd5c72cb924051e706383e39e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/mime',
             'aliases' => array(),
@@ -395,10 +395,21 @@
             ),
             'dev_requirement' => false,
         ),
+        'symfony/polyfill-php83' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'c3c1a89daffd479eb4b0ed46294818d11c0d300d',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-php83',
+            'aliases' => array(
+                0 => '1.27.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
         'symfony/routing' => array(
             'pretty_version' => '6.3.x-dev',
             'version' => '6.3.9999999.9999999-dev',
-            'reference' => '857ac6f4df371470fbdefa2f5967a2618dbf1852',
+            'reference' => '3ecde5bf1fca49663857f339c36cb216b0bc6437',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/routing',
             'aliases' => array(),
@@ -407,7 +418,7 @@
         'symfony/translation' => array(
             'pretty_version' => '6.3.x-dev',
             'version' => '6.3.9999999.9999999-dev',
-            'reference' => 'c08de62caead8357244efcb809d0b1a2584f2198',
+            'reference' => 'd4f60bb751c7e157fbe85278e733554daa934701',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/translation',
             'aliases' => array(),
@@ -416,11 +427,11 @@
         'symfony/translation-contracts' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '6c828f3d272ff0767e31e27c8ce5d2b51038f251',
+            'reference' => '68cce71402305a015f8c1589bfada1280dc64fe7',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/translation-contracts',
             'aliases' => array(
-                0 => '3.2.x-dev',
+                0 => '3.3.x-dev',
             ),
             'dev_requirement' => false,
         ),
@@ -433,7 +444,7 @@
         'symfony/var-dumper' => array(
             'pretty_version' => '6.3.x-dev',
             'version' => '6.3.9999999.9999999-dev',
-            'reference' => 'eefb4e899f77fc9d7271072ab213d17d09bb4d52',
+            'reference' => '0dd4f98c4d1227857ad66cb8dca178a594745990',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
