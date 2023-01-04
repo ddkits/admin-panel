@@ -3,14 +3,14 @@
 
 Route::group(['middleware' => ['web', 'auth']], function () {
     // admins
-    Route::resource('/ddk/admin/menu', 'Ddkits\Adminpanel\Controller\MenusController');
-    Route::resource('/admin', 'Ddkits\Adminpanel\Controller\AdminPanelController');
-    Route::resource('/profile', 'Ddkits\Adminpanel\Controller\ProfilesController');
+    Route::resource('/ddk/admin/menu', ['as' => 'ddk.admin.menus', 'uses' => 'Ddkits\Adminpanel\Controller\MenusController']);
+    Route::resource('/admin', ['as' => 'ddk.admin.main', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController']);
+    Route::resource('/profile', ['as' => 'ddk.admin.profile', 'uses' => 'Ddkits\Adminpanel\Controller\ProfilesController']);
     // Route::resource('/admin-refreshapps', 'RefreshAppsCont');
     Route::get('/admin-test-java', ['as' => 'ddk.admin.test.java', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController@testJava']);
     // Route::resource('/admin-shell', 'ShellCont');
-    Route::resource('/admin/private/settings', 'Ddkits\Adminpanel\Controller\SettingsController');
-    Route::resource('/admin/posts', 'Ddkits\Adminpanel\Controller\PostController');
+    Route::resource('/admin/private/settings', ['as' => 'ddk.admin.settings.private', 'uses' => 'Ddkits\Adminpanel\Controller\SettingsController']);
+    Route::resource('/admin/posts', ['as' => 'ddk.admin.posts', 'uses' => 'Ddkits\Adminpanel\Controller\PostController']);
     // Route::resource('/admin/sites', 'SitesCont');
     Route::post('/admin-save/settings', ['as' => 'ddk.admin.settings.save', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController@storeSettings']);
     Route::post('/admin/create-settings', ['as' => 'ddk.admin.settings.store', 'uses' => 'Ddkits\Adminpanel\Controller\AdminPanelController@createSettings']);
