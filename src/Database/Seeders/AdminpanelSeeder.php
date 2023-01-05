@@ -173,7 +173,7 @@ class AdminpanelSeeder extends Seeder
         $menuList = new Menus;
         // Adding main admin's and main's menu links
         $menus = [
-            ['id'=>1, 'weight' => 1, 'description' => 'Admin page', 'menu' => 'adminmenu', 'menuparent' => null, 'name' => 'Admin', 'link' => '/admin', 'iconclass' => 'fa-folder',
+            ['id'=>1, 'weight' => 1, 'description' => 'Admin page', 'menu' => 'adminmenu', 'menuparent' => null, 'name' => 'Admin', 'link' => '/ddk/admin', 'iconclass' => 'fa-folder',
             'class' => 'nav-link'],
 
             ['id'=>2,'weight' => 2, 'description' => 'Menu Admin page', 'menu' => 'adminmenu', 'menuparent' => 1, 'name' => 'Menus', 'link' => '/ddk/admin/menus', 'iconclass' => 'fa-wrench',
@@ -191,7 +191,7 @@ class AdminpanelSeeder extends Seeder
 
             // ['id'=>10,'weight'=>3, 'description'=>'Outbox', 'menu'=>'mainmenu', 'menuparent'=>7, 'name'=>'Outbox', 'link'=>'/messages/outbox', 'iconclass'=>'', 'class'=>'menu'],
 
-            ['id'=>4,'weight' => 4, 'description' => 'Settings', 'menu' => 'adminmenu', 'menuparent' => 1, 'name' => 'Settings', 'link' => '/admin/private/settings', 'iconclass' => 'fa-wrench',
+            ['id'=>4,'weight' => 4, 'description' => 'Settings', 'menu' => 'adminmenu', 'menuparent' => 1, 'name' => 'Settings', 'link' => '/ddk/admin/private/settings', 'iconclass' => 'fa-wrench',
             'class' => 'nav-link'],
 
             // API Doc Pro Dash Menus

@@ -26,7 +26,7 @@
                                 </li>
                                   @endif
                             @endforeach
-                                        <li><span class="badge badge-important">0</span><a href="/dashboard"><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></a></li>
+                                        <li><span class="badge badge-important">0</span><a href="/ddk/dashboard"><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></a></li>
                                         <li><a href="#"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">

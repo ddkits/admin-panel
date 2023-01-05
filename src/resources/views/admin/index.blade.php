@@ -49,7 +49,7 @@
 						Homepage Featured Posts
 					</td>
 					<td>
-						<a href="/admin-posts" class="form-control btn-success">Click here</a>
+						<a href="/ddk/admin-posts" class="form-control btn-success">Click here</a>
 					</td>
 				</tr>
 				<tr>
@@ -57,7 +57,7 @@
 						Settings
 					</td>
 					<td>
-						<a href="/admin/private/settings" class="form-control btn-success">Click here</a>
+						<a href="/ddk/admin/private/settings" class="form-control btn-success">Click here</a>
 					</td>
 				</tr>
 			</tbody>

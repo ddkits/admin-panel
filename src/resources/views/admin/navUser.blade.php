@@ -54,9 +54,9 @@
                                                             {{ Auth::user()->email }}</p>
                                                         <div class="divider">
                                                         </div>
-                                                        <!-- <a href="/profile/{{ $profile->getProfInfo(Auth::user()->id)->id }}/edit" class="btn btn-default btn-xs"><i class="fa fa-user-o" aria-hidden="true"></i>Edit Profile</a> -->
+                                                        <!-- <a href="/ddk/profile/{{ $profile->getProfInfo(Auth::user()->id)->id }}/edit" class="btn btn-default btn-xs"><i class="fa fa-user-o" aria-hidden="true"></i>Edit Profile</a> -->
                                                         <a href="/friends" class="btn btn-default btn-xs"><i class="fa fa-address-card-o" aria-hidden="true"></i> Friends</a>
-                                                        <a href="/profile/{{ $profile->getProfInfo(Auth::user()->id)->id }}/edit" class="btn btn-default btn-xs"><i class="fa fa-cogs" aria-hidden="true"></i> Settings</a>
+                                                        <a href="/ddk/profile/{{ $profile->getProfInfo(Auth::user()->id)->id }}/edit" class="btn btn-default btn-xs"><i class="fa fa-cogs" aria-hidden="true"></i> Settings</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,7 +64,7 @@
                                                 <div class="navbar-footer-content">
                                                     <div class="row">
                                                         <div class="col-md-6">
-                                                            <a href="/profile/{{ $profile->getProfInfo(Auth::user()->id)->id }}/edit#password" class="btn btn-default btn-sm"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Change Passowrd</a>
+                                                            <a href="/ddk/profile/{{ $profile->getProfInfo(Auth::user()->id)->id }}/edit#password" class="btn btn-default btn-sm"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Change Passowrd</a>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <a href="{{ route('logout') }}" class="btn btn-default btn-sm pull-right" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-power-off" aria-hidden="true"></i> Sign Out</a>

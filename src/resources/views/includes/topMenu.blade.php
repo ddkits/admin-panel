@@ -49,7 +49,7 @@
             
             @else
             <li class="nav-item">
-              <a class="nav-link" href="/dashboard"> 
+              <a class="nav-link" href="/ddk/dashboard"> 
               {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}
               </a>
             </li>

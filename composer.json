@@ -1,7 +1,6 @@
 {
     "name": "ddkits/admin-panel",
     "description": "DDkits Admin Panel a full Admin panel that gives you control over Laravel as pro",
-    "version": "1.0.45",
     "license": "MIT",
     "autoload": {
         "psr-4": {

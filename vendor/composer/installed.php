@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'ddkits/admin-panel',
-        'pretty_version' => '1.0.45',
-        'version' => '1.0.45.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '216e6d520239cb88696a8a9e6822cdc78f2b4214',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'ddkits/admin-panel' => array(
-            'pretty_version' => '1.0.45',
-            'version' => '1.0.45.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '216e6d520239cb88696a8a9e6822cdc78f2b4214',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

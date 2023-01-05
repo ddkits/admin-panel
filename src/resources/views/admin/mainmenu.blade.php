@@ -22,7 +22,7 @@
 <ul class="list-unstyled">
 <li id="show-profile"><a href="{{ route('profile.show', Auth::user()->id) }}" ><i class="icon-home"></i>My Profile<i class="logDown fa pull-right">v</i></a>
   <ul id="menu-profile" class="list-unstyled menuTree2" style="display: none;">
-    <li><a href="/profile/{{ $profile->getProfInfo(Auth::user()->id)->id }}/edit"> <i class="icon-settings"></i>Edit Profile</a>
+    <li><a href="/ddk/profile/{{ $profile->getProfInfo(Auth::user()->id)->id }}/edit"> <i class="icon-settings"></i>Edit Profile</a>
     </li>
   </ul>
 </li>

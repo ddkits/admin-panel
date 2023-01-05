@@ -77,7 +77,7 @@ class ProfilesController extends Controller
                 'user'=>$user,
             ]);
         } else {
-            return redirect('/profile');
+            return redirect('/ddk/profile');
         }
     }
 

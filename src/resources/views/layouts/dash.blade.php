@@ -16,7 +16,7 @@
                 <a href="/" class="simple-text logo-mini">
                     <i class="fa fa-home"></i>
                 </a>
-                <a href="/dashboard" class="simple-text logo-normal">
+                <a href="/ddk/dashboard" class="simple-text logo-normal">
                     {{ $getInfo->getValue('sitename') }}
                 </a>
             </div>
