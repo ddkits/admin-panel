@@ -13,6 +13,7 @@ class CreateAdminsTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('admins')) {
         Schema::create('admins', function (Blueprint $table) {
             $table->increments('id');
             $table->bigInteger('uid')->unsigned();
@@ -22,6 +23,7 @@ class CreateAdminsTable extends Migration
             $table->foreign('uid')->references('id')->on('users');
 
         });
+        }
     }
 
     /**
