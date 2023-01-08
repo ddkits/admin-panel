@@ -13,6 +13,7 @@ class CreateTagsTable extends Migration
      */
     public function up()
     {
+         if (!Schema::hasTable('tags')) {
         Schema::create('tags', function (Blueprint $table) {
             $table->increments('id');
             $table->text('tag');
@@ -21,6 +22,7 @@ class CreateTagsTable extends Migration
             $table->integer('uid')->nullable();
             $table->timestamps();
         });
+         }
     }
 
     /**
