@@ -13,6 +13,8 @@ class CreateProfilesTable extends Migration
      */
     public function up()
     {
+                 if (!Schema::hasTable('profiles')) {
+
         Schema::create('profiles', function (Blueprint $table) {
             $table->increments('id');
             $table->bigInteger('uid')->unsigned();
@@ -24,6 +26,7 @@ class CreateProfilesTable extends Migration
             $table->foreign('uid')->references('id')->on('users');
 
         });
+                 }
     }
 
     /**
