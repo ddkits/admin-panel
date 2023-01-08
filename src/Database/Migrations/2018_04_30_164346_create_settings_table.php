@@ -13,6 +13,7 @@ class CreateSettingsTable extends Migration
      */
     public function up()
     {
+         if (!Schema::hasTable('settings')) {
         Schema::create('settings', function (Blueprint $table) {
             $table->increments('id');
             $table->text('field_name')->uinque();
@@ -21,6 +22,7 @@ class CreateSettingsTable extends Migration
             $table->text('uid')->nullable();
             $table->timestamps();
         });
+         }
     }
 
     /**
