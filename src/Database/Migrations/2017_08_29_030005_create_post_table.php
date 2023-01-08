@@ -14,7 +14,7 @@ class CreatePostTable extends Migration
     public function up()
     {
         
-        if (!Schema::hasTable('tblCategory')) {
+        if (!Schema::hasTable('post')) {
             Schema::create('post', function (Blueprint $table) {
                 $table->increments('id');
                 $table->bigInteger('uid')->unsigned();
