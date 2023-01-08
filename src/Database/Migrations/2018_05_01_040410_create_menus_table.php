@@ -13,6 +13,7 @@ class CreateMenusTable extends Migration
      */
     public function up()
     {
+         if (!Schema::hasTable('menus')) {
         Schema::create('menus', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('weight')->default(0);
@@ -28,6 +29,7 @@ class CreateMenusTable extends Migration
             $table->string('adminlevel')->nullable();
             $table->timestamps();
         });
+         }
     }
 
     /**
