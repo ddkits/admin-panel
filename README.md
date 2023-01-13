@@ -51,4 +51,6 @@ php artisan migrate
  
  Regards
  Sam Ayoub
- DDKits.com
+Powered By:
+www.reallexi.com
+ReaLexi | The Real Word
